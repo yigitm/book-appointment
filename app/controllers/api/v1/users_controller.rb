@@ -1,8 +1,7 @@
-class UsersController < ApplicationController
+class Api::V1::UsersController < ApplicationController
   def index
     render json: User.all
   end
-
 
   def create
     @user = User.create(user_params)
