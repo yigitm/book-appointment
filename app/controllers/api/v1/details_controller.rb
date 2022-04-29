@@ -1,4 +1,4 @@
-class DetailsController < ApplicationController
+class Api::V1::DetailsController < ApplicationController
   before_action :set_detail, only: %i[ show update destroy ]
 
   # GET /details

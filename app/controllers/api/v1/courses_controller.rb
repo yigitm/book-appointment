@@ -1,4 +1,4 @@
-class CoursesController < ApplicationController
+class Api::V1::CoursesController < ApplicationController
   before_action :set_course, only: %i[ show update destroy ]
 
   # GET /courses
@@ -46,6 +46,6 @@ class CoursesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def course_params
-      params.require(:course).permit(:name, :info, :user_id)
+      params.require(:course).permit(:course_type, :info, :user_id)
     end
 end
