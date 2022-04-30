@@ -1,11 +1,15 @@
-class Api::V1::CoursesController < ApplicationController
+class Api::V1::CoursesController < ApplicationController 
   before_action :set_course, only: %i[ show update destroy ]
 
   # GET /courses
   def index
     @courses = Course.all
-
-    render json: @courses
+    
+    if user_authorized?
+      render json: @courses
+    else
+      render json: { error: 'Invalid API token! User not found.' }, status: :unprocessable_entity
+    end
   end
 
   # GET /courses/1
@@ -16,9 +20,10 @@ class Api::V1::CoursesController < ApplicationController
   # POST /courses
   def create
     @course = Course.new(course_params)
+    @course.user_id = current_user.id
 
-    if @course.save
-      render json: @course, status: :created, location: @course
+    if user_authorized? && @course.save
+      render json: @course, status: :created, location: 'courses'
     else
       render json: @course.errors, status: :unprocessable_entity
     end
@@ -36,6 +41,21 @@ class Api::V1::CoursesController < ApplicationController
   # DELETE /courses/1
   def destroy
     @course.destroy
+  end
+
+  def user_authorized?
+   return false unless request.headers["Authorization"]
+    token = request.headers["Authorization"].split(' ')[1] 
+    decoded_token = JWT.decode token, nil, false
+    @user = User.find_by(id: decoded_token[0]["user_id"])
+    !!@user
+  end
+
+  def current_user
+    token = request.headers["Authorization"].split(' ')[1]
+    decoded_token = JWT.decode token, nil, false
+    @user = User.find_by(id: decoded_token[0]["user_id"])
+    @user
   end
 
   private
