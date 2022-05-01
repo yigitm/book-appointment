@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   namespace :api, default: { format: 'json'} do
     namespace :v1 do
       resources :users, only: [:index, :create]
-      resources :courses, only: [:index, :create, :destroy]
+      resources :courses, only: [:index, :create, :show, :destroy]
       resources :details, only: [:index, :create]
       post "/login", to: "users#login"
       post "/courses/new", to: "courses#create"

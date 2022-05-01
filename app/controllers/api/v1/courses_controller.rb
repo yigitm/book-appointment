@@ -14,7 +14,11 @@ class Api::V1::CoursesController < ApplicationController
 
   # GET /courses/1
   def show
-    render json: @course
+    if user_authorized?
+      render json: @course.detail
+    else
+      render json: { error: 'Invalid API token! User not found.' }, status: :unprocessable_entity
+    end
   end
 
   # POST /courses
@@ -47,21 +51,6 @@ class Api::V1::CoursesController < ApplicationController
     else
       render json: @course.errors, status: :unprocessable_entity
     end
-  end
-
-  def user_authorized?
-   return false unless request.headers["Authorization"]
-    token = request.headers["Authorization"].split(' ')[1] 
-    decoded_token = JWT.decode token, nil, false
-    @user = User.find_by(id: decoded_token[0]["user_id"])
-    !!@user
-  end
-
-  def current_user
-    token = request.headers["Authorization"].split(' ')[1]
-    decoded_token = JWT.decode token, nil, false
-    @user = User.find_by(id: decoded_token[0]["user_id"])
-    @user
   end
 
   def course_detail
