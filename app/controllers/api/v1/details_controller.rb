@@ -1,11 +1,13 @@
 class Api::V1::DetailsController < ApplicationController
-  before_action :set_detail, only: %i[ show update destroy ]
-
   # GET /details
   def index
     @details = Detail.all
 
-    render json: @details
+    if user_authorized?
+      render json: @details
+    else
+      render json: { error: 'Invalid API token! User not found.' }, status: :unprocessable_entity
+    end
   end
 
   # GET /details/1

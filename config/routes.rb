@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:index, :create]
       resources :courses, only: [:index, :create, :show, :destroy]
-      resources :details, only: [:index, :create]
+      resources :details, only: [:index]
       post "/login", to: "users#login"
       post "/courses/new", to: "courses#create"
       delete "courses/delete", to: "courses#destroy"
