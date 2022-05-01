@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :details, only: [:index, :create]
       post "/login", to: "users#login"
       post "/courses/new", to: "courses#create"
+      delete "courses/delete", to: "courses#destroy"
     end
   end
 end

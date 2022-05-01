@@ -1,5 +1,5 @@
 class Api::V1::CoursesController < ApplicationController 
-  before_action :set_course, only: %i[ show update destroy ]
+  before_action :set_course, only: %i[ show update ]
 
   # GET /courses
   def index
@@ -19,7 +19,7 @@ class Api::V1::CoursesController < ApplicationController
 
   # POST /courses
   def create
-    @course = Course.new(course_params.except(:course_name, :summary))
+    @course = Course.new(course_params.except(:course_name, :summary, :course_id))
     @course.user_id = current_user.id
 
     if user_authorized? && @course.save
@@ -40,7 +40,13 @@ class Api::V1::CoursesController < ApplicationController
 
   # DELETE /courses/1
   def destroy
-    @course.destroy
+    if user_authorized?
+      @course = Course.find_by(course_type: course_params[:course_type])
+      @course.destroy
+      render json: { message: 'Course is deleted!' }, status: :ok, location: 'courses'
+    else
+      render json: @course.errors, status: :unprocessable_entity
+    end
   end
 
   def user_authorized?
