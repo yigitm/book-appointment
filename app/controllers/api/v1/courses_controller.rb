@@ -19,11 +19,11 @@ class Api::V1::CoursesController < ApplicationController
 
   # POST /courses
   def create
-    @course = Course.new(course_params)
+    @course = Course.new(course_params.except(:course_name, :summary))
     @course.user_id = current_user.id
 
     if user_authorized? && @course.save
-      render json: @course, status: :created, location: 'courses'
+      render json: { course: @course, detail: course_detail }, status: :created, location: 'courses'
     else
       render json: @course.errors, status: :unprocessable_entity
     end
@@ -58,6 +58,16 @@ class Api::V1::CoursesController < ApplicationController
     @user
   end
 
+  def course_detail
+    @detail = Detail.new(course_params.except(:course_type, :info, :user_id))
+    @detail.course_id = @course.id
+    if @detail.save
+      @detail
+    else
+      'Invalid course details'
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_course
@@ -66,6 +76,6 @@ class Api::V1::CoursesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def course_params
-      params.require(:course).permit(:course_type, :info, :user_id)
+      params.require(:course).permit(:course_type, :info, :course_name, :summary, :user_id)
     end
 end
