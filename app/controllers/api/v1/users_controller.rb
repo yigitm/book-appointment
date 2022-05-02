@@ -1,6 +1,10 @@
 class Api::V1::UsersController < ApplicationController
   def index
-    render json: User.all
+    if user_authorized?
+      render json: User.all
+    else
+      render json: { error: 'Invalid API token! User not found.' }, status: :unprocessable_entity
+    end
   end
 
   def create
