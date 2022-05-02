@@ -1,0 +1,121 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  '/api/v1/courses':
+    get:
+      summary: list courses
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create course
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#components/securitySchemes'
+            example:
+              course:
+                course_type: A340-Type Course
+                info: A340 course info.
+                course_name: A340-Cabin
+                summary: A340 cabin summary.
+      responses:
+        '200':
+          description: successful
+  '/api/v1/courses/{id}':
+    parameters:
+      - name: id
+        in: path
+        description: id
+        required: true
+        schema:
+          type: string
+    get:
+      summary: show course
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete course
+      responses:
+        '200':
+          description: successful
+  '/api/v1/courses/new':
+    post:
+      summary: create course
+      responses:
+        '200':
+          description: successful
+  '/api/v1/courses/delete':
+    delete:
+      summary: delete course
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#components/securitySchemes'
+            example:
+              course:
+                course_type: A340-Type Course
+                info: A340 course info.
+                course_name: A340-Cabin
+                summary: A340 cabin summary.
+      responses:
+        '200':
+          description: successful
+  '/api/v1/users':
+    get:
+      summary: list users
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#components/User'
+            example:
+              user:
+                username: test_user3
+                password: '123456'
+      responses:
+        '200':
+          description: successful
+  '/api/v1/login':
+    post:
+      summary: login user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#components/securitySchemes'
+            example:
+              user:
+                username: test_user
+                password: '123456'
+      responses:
+        '200':
+          description: successful
+servers:
+  - url: http://{defaultHost}
+    variables:
+      defaultHost:
+        default: localhost:3000
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: []
+User:
+  user:
+    username: test_user3
+    password: '123456'
