@@ -2,44 +2,52 @@
 
 # Rails API for Book Appoinment App
 
-> This Rails API is a simple course app with basic functionalities and consists of implementing a Ruby on Rails back-end with JWT Bearer authentication using bcrypt & JWT gems.
+This Rails API is a simple course app with basic functionalities and consists of implementing a Ruby on Rails back-end with JWT Bearer authentication using bcrypt & JWT gems.
 
-> Main functionalities are:
+Main functionalities are:
 
 - Sign-up/Login users with dedicated endpoints
 - Creating/Deleting courses with dedicated endpoints
 
 ![App Screenshot](app/assests/api-doc-1.png)
 
-> Personally; my learning purpose was practicing basic authentication with JWT, creating API endpoints to consume it with a separate front end and preparing an automated API documentation with rswag gem.
+My learning purpose based on practicing basic authentication with JWT, creating API endpoints to consume it with a separate front end and preparing an automated API documentation with rswag gem.
 
-> API documentation is created by using rswag. Documentation use case examples for user sign-ups/logins and adding/deleting of the courses implemented by configuring Swagger-YAML.
+API documentation is created by using rswag. Documentation use case examples for user sign-ups/logins and adding/deleting of the courses implemented by configuring Swagger-YAML.
 
 ## How to use this API
 
 > To use all features in your browser by a dedicated API documentation page with a graphical user interface;
 
-> Clone this repository by following these [steps](#Getting-Started).
+- Clone this repository by following these [steps](#Getting-Started).
 
-> Then go to this [link](http://localhost:3000/api-docs).
+- Then go to this [link](http://localhost:3000/api-docs).
 
-> You should see below page in your browser:
+- You should see the below page in your browser:
 
 ![App Screenshot](app/assests/api-doc-1.png)
 
-> Before requesting any other option, you must create a user with this sign-up endpoint.
+> Before requesting any other option, you must create a user with this sign-up endpoint. After clicking to 'Try it Out' button, you can type your username & password right between quote signs and press 'Execute'.
 
 ![App Screenshot](app/assests/api-doc-create-user.png)
 
-> After creating a user; you will receive a bearer authentication token as a response of this request if your user credentails are correct & valid.
-
-> To learn more about bearer authentication; please check this [ link ](https://swagger.io/docs/specification/authentication/bearer-authentication/).
+> After creating a user; you will receive a bearer authentication token as a response of this request if your user credentials are correct & valid.
 
 > The response should be like this; if your user is successfully created.
 
 ![App Screenshot](app/assests/api-doc-token.png)
 
-> Once you got your token; these are the all endpoints that you can consume by adding your token in your header for each GET/POST/DELETE request.
+> To learn more about bearer authentication; please check this [ link ](https://swagger.io/docs/specification/authentication/bearer-authentication/).
+
+> Once you got your token, you need to authenticate your by adding it to your requests' header. Copy this token and click to below authenticate button.
+
+![App Screenshot](app/assests/api-doc-3.png)
+
+> Paste your token to below text box. Press 'Authorize' and close the pop-up menu.
+
+![App Screenshot](app/assests/api-doc-4.png)
+
+> These are the all endpoints that you can consume after adding your token in your header for each GET/POST/DELETE request.
 
 ![App Screenshot](app/assests/api-doc-2.png)
 
@@ -106,12 +114,19 @@ Run below command to install packages that app is depended to run.
 bundle install
 ```
 
-Run below to set database
+Run below to set database.
 
 ```
 rails db:create
 rails db:migrate
 rails db:seed
+```
+
+To fetch the latest version of the app, run below commands.
+
+```
+git checkout -b API-readme
+git pull origin API-readme
 ```
 
 Run the local Rails server in your default browser with below command.
