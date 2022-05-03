@@ -17,7 +17,7 @@ API documentation is created by using rswag. Documentation use case examples for
 
 ## How to use this API
 
-> To use all features in your browser by a dedicated API documentation page with a graphical user interface;
+To use all features in your browser by a dedicated API documentation page with a graphical user interface;
 
 - Clone this repository by following these [steps](#Getting-Started).
 
