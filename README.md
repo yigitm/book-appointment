@@ -17,6 +17,16 @@
 
 ## How to use this API
 
+> To use all features in your browser by a dedicated API documentation page with a graphical user interface;
+
+> Clone this repository by following these [steps](#Getting-Started).
+
+> Then go to this [link](http://localhost:3000/api-docs).
+
+> You should see below page in your browser:
+
+![App Screenshot](app/assests/api-doc-1.png)
+
 > Before requesting any other option, you must create a user with this sign-up endpoint.
 
 ![App Screenshot](app/assests/api-doc-create-user.png)
