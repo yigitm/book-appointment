@@ -27,7 +27,7 @@ module Api
 
       # POST /courses
       def create
-        @course = Course.new(course_params.except(:course_name, :summary, :course_id))
+        @course = Course.new(course_params.except(:course_name, :summary))
         @course.user_id = current_user.id
 
         if user_authorized? && @course.save
@@ -71,11 +71,6 @@ module Api
       end
 
       private
-
-      # Use callbacks to share common setup or constraints between actions.
-      def set_course
-        @course = Course.find(params[:id])
-      end
 
       # Only allow a list of trusted parameters through.
       def course_params
