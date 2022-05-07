@@ -58,11 +58,8 @@ module Api
       end
 
       def course_detail
-        @detail = Detail.new
-        @detail.course_id = @course.id
-        @detail.course_name = course_params[:course_name]
-        @detail.summary = course_params[:summary]
-
+        @detail = Detail.create(course_id: @course.id, course_name: course_params[:course_name], summary: course_params[:summary])
+       
         if @detail.save
           @detail
         else
