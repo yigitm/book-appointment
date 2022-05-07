@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { User.new(username: 'Test User', password:'123456') }
+  subject { User.new(username: 'Test User', password: '123456') }
 
   before { subject.save }
 
@@ -21,7 +23,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'username should be unique & not be case sensitive' do
-    subject_two = User.new(username: 'test user', password:'123456')
+    subject_two = User.new(username: 'test user', password: '123456')
     expect(subject_two).to_not be_valid
   end
 

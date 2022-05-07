@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Course, type: :model do
-  subject { Course.new(course_type: 'Pilot Courses', info:'Pilot course category') }
+  subject { Course.new(course_type: 'Pilot Courses', info: 'Pilot course category') }
 
   before { subject.save }
 
@@ -16,7 +18,7 @@ RSpec.describe Course, type: :model do
   end
 
   it 'course type should be unique & not be case sensitive' do
-    subject_two = Course.new(course_type: 'pilot courses', info:'pilot course category')
+    subject_two = Course.new(course_type: 'pilot courses', info: 'pilot course category')
     expect(subject_two).to_not be_valid
   end
 

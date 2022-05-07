@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Detail, type: :model do
-  subject { Detail.new(course_name: 'A320 Cabin', summary:'123456') }
+  subject { Detail.new(course_name: 'A320 Cabin', summary: '123456') }
 
   before { subject.save }
 
