@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# All actions are in used for user authentication.
 module Api
   module V1
     class UsersController < ApplicationController

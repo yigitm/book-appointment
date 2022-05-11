@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# None of the details resource is used. Details DB records are created with Courses/#course_details action.
 module Api
   module V1
     class DetailsController < ApplicationController

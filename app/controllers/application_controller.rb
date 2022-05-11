@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# JWT & bcrpyt & bearer authentication is used for basic authentication.
 class ApplicationController < ActionController::API
   def encode_token(payload)
     JWT.encode(payload, 'secret')

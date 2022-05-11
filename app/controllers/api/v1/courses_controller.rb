@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# index/create/destroy/course_detail actions are in used for courses resource.
 module Api
   module V1
     class CoursesController < ApplicationController
@@ -58,8 +59,9 @@ module Api
       end
 
       def course_detail
-        @detail = Detail.create(course_id: @course.id, course_name: course_params[:course_name], summary: course_params[:summary])
-       
+        @detail = Detail.create(course_id: @course.id, course_name: course_params[:course_name],
+                                summary: course_params[:summary])
+
         if @detail.save
           @detail
         else
