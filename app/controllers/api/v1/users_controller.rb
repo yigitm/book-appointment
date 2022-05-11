@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Api
   # All actions are in used for user authentication.
   module V1

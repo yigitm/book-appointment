@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Api
   # None of the details resource is used.
   module V1

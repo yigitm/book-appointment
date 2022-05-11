@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Api
   # index/create/destroy/course_detail actions are in used.
   module V1
