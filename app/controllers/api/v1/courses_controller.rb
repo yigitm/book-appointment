@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
-# index/create/destroy/course_detail actions are in used for courses resource.
 module Api
+  # index/create/destroy/course_detail actions are in used.
   module V1
+    # course_detail action is used to create and save detail object.
     class CoursesController < ApplicationController
       before_action :set_course, only: %i[show update]
 

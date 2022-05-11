@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
-# All actions are in used for user authentication.
 module Api
+  # All actions are in used for user authentication.
   module V1
+    # All actions are in used for user authentication.
     class UsersController < ApplicationController
       def index
         if user_authorized?

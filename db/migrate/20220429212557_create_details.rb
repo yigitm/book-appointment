@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Style/Documentation
 class CreateDetails < ActiveRecord::Migration[7.0]
   def change
     create_table :details do |t|
@@ -11,3 +12,4 @@ class CreateDetails < ActiveRecord::Migration[7.0]
     end
   end
 end
+# rubocop:enable Style/Documentation

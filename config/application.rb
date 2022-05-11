@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Style/Documentation
 require_relative 'boot'
 
 require 'rails'
@@ -39,3 +40,4 @@ module BookAppointment
     config.api_only = true
   end
 end
+# rubocop:enable Style/Documentation

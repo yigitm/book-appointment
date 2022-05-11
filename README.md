@@ -9,7 +9,7 @@ Main functionalities are:
 - Sign-up/Login users with dedicated endpoints
 - Creating/Deleting courses with dedicated endpoints
 
-![App Screenshot](app/assests/api-doc-1.png)
+![App Screenshot](app/assets/api-doc-1.png)
 
 My learning purpose based on practicing basic authentication with JWT, creating API endpoints to consume it with a separate front end and preparing an automated API documentation with rswag gem.
 
@@ -25,31 +25,31 @@ To use all features in your browser by a dedicated API documentation page with a
 
 - You should see the below page in your browser:
 
-![App Screenshot](app/assests/api-doc-1.png)
+![App Screenshot](app/assets/api-doc-1.png)
 
 > Before requesting any other option, you must create a user with this sign-up endpoint. After clicking to 'Try it Out' button, you can type your username & password right between quote signs and press 'Execute'.
 
-![App Screenshot](app/assests/api-doc-create-user.png)
+![App Screenshot](app/assets/api-doc-create-user.png)
 
 > After creating a user; you will receive a bearer authentication token as a response of this request if your user credentials are correct & valid.
 
 > The response should be like this; if your user is successfully created.
 
-![App Screenshot](app/assests/api-doc-token.png)
+![App Screenshot](app/assets/api-doc-token.png)
 
 > To learn more about bearer authentication; please check this [ link ](https://swagger.io/docs/specification/authentication/bearer-authentication/).
 
 > Once you got your token, you need to authenticate your by adding it to your requests' header. Copy this token and click to below authenticate button.
 
-![App Screenshot](app/assests/api-doc-3.png)
+![App Screenshot](app/assets/api-doc-3.png)
 
 > Paste your token to below text box. Press 'Authorize' and close the pop-up menu.
 
-![App Screenshot](app/assests/api-doc-4.png)
+![App Screenshot](app/assets/api-doc-4.png)
 
 > These are the all endpoints that you can consume after adding your token in your header for each GET/POST/DELETE request.
 
-![App Screenshot](app/assests/api-doc-2.png)
+![App Screenshot](app/assets/api-doc-2.png)
 
 ## React Frontend
 
@@ -57,7 +57,7 @@ To use all features in your browser by a dedicated API documentation page with a
 
 [React Frontend repository](https://github.com/yigitm/book-appointment-frontend/tree/Readme-Frontend)
 
-![React Frontend](app/assests/app.gif)
+![React Frontend](app/assets/app.gif)
 
 ## Built With
 

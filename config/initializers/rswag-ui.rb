@@ -1,3 +1,4 @@
+# rubocop:disable Naming/FileName
 # frozen_string_literal: true
 
 Rswag::Ui.configure do |c|
@@ -13,3 +14,4 @@ Rswag::Ui.configure do |c|
   # c.basic_auth_enabled = true
   # c.basic_auth_credentials 'username', 'password'
 end
+# rubocop:enable Naming/FileName
