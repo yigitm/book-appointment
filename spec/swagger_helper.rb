@@ -27,7 +27,7 @@ RSpec.configure do |config|
           url: 'http://{defaultHost}',
           variables: {
             defaultHost: {
-              default: 'https://afternoon-ravine-99760.herokuapp.com/'
+              default: 'localhost:3000/'
             }
           }
         }
