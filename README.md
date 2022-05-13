@@ -53,7 +53,9 @@ To use all features in your browser by a dedicated API documentation page with a
 
 ## Kanban Board
 
-[Kanban Board Link](https://github.com/yigitm/book-appointment/projects/2)
+Kanban Board: [Link](https://github.com/yigitm/book-appointment/projects/2)
+
+![Kanban Board](https://user-images.githubusercontent.com/24368914/165861353-b4e45551-81f3-46a3-8abd-d7c3f86f23bd.png)
 
 ## Live Demo
 
