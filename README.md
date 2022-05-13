@@ -119,20 +119,20 @@ Run below to set database.
 ```
 rails db:create
 rails db:migrate
-rails db:seed
-```
-
-To fetch the latest version of the app, run below commands.
-
-```
-git checkout -b API-readme
-git pull origin API-readme
 ```
 
 Run the local Rails server in your default browser with below command.
 
 ```
 rails s
+```
+
+### Test
+
+RSpec is used for testing. Run below command to run all tests.
+
+```
+rspec
 ```
 
 ## Author
