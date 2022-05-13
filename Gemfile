@@ -47,6 +47,6 @@ group :development do
 end
 
 gem 'jwt'
-gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'rspec-rails'
 gem 'rswag'
+gem 'rubocop', '>= 1.0', '< 2.0'
