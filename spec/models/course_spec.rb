@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Course, type: :model do
-  subject { Course.new(course_type: 'Pilot Courses', info: 'Pilot course category') }
+  user = User.create(username: 'Test User', password: '123456')
 
+  subject { Course.new(course_type: 'Pilot Courses', info: 'Pilot course category', user_id: user.id) }
   before { subject.save }
 
   it 'course type should be present' do
@@ -28,5 +29,11 @@ RSpec.describe Course, type: :model do
   it 'course type length should be >= 10' do
     subject.info = 'Pc'
     expect(subject).to_not be_valid
+  end
+  # Positive test case.
+
+  it 'course should be valid' do
+    subject.user_id = User.first.id
+    expect(subject).to be_valid
   end
 end

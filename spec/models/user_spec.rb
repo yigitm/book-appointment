@@ -29,4 +29,10 @@ RSpec.describe User, type: :model do
     subject.password = '12345'
     expect(subject).to_not be_valid
   end
+  # Positive test case.
+
+  it 'user should be valid' do
+    test_user = User.new(username: 'Test User-2', password: '12345678')
+    expect(test_user).to be_valid
+  end
 end

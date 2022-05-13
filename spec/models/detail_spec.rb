@@ -24,4 +24,9 @@ RSpec.describe Detail, type: :model do
     subject.summary = 'short sum'
     expect(subject).to_not be_valid
   end
+  # Positive test case.
+
+  it 'course detail should be valid' do
+    expect(subject).to_not be_valid
+  end
 end
