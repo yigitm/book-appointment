@@ -51,6 +51,10 @@ To use all features in your browser by a dedicated API documentation page with a
 
 ![App Screenshot](app/assets/api-doc-2.png)
 
+## Kanban Board
+
+[Kanban Board Link](https://github.com/yigitm/book-appointment/projects/2)
+
 ## Live Demo
 
 React Frontend : [Live Demo Link](https://warm-smakager-3f854a.netlify.app/)
