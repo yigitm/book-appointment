@@ -51,11 +51,13 @@ To use all features in your browser by a dedicated API documentation page with a
 
 ![App Screenshot](app/assets/api-doc-2.png)
 
-## React Frontend
+## Live Demo
 
-> You can check the dedicated front end for this API with below links.
+React Frontend : [Live Demo Link](https://warm-smakager-3f854a.netlify.app/)
 
-[React Frontend repository](https://github.com/yigitm/book-appointment-frontend/tree/Readme-Frontend)
+Rails Backend : [Live Demo Link](https://afternoon-ravine-99760.herokuapp.com/api-docs/index.html)
+
+Rails Backend : [Repository Link](https://github.com/yigitm/book-appointment/dev)
 
 ![React Frontend](app/assets/app.gif)
 
