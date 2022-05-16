@@ -15,6 +15,23 @@ My learning purpose based on practicing basic authentication with JWT, creating 
 
 API documentation is created by using rswag. Documentation use case examples for user sign-ups/logins and adding/deleting of the courses implemented by configuring Swagger-YAML.
 
+## Kanban Board
+
+Kanban Board: [Link](https://github.com/yigitm/book-appointment/projects/2)
+
+![Kanban Board](https://user-images.githubusercontent.com/24368914/165861353-b4e45551-81f3-46a3-8abd-d7c3f86f23bd.png)
+
+## Live Demo
+
+React Frontend : [Live Demo Link](https://warm-smakager-3f854a.netlify.app/)
+
+React Frontend : [Repository Link](https://github.com/yigitm/book-appointment-frontend)
+
+Rails Backend : [Live Demo Link](https://afternoon-ravine-99760.herokuapp.com/api-docs/index.html)
+
+
+![React Frontend](app/assets/app.gif)
+
 ## How to use this API
 
 To use all features in your browser by a dedicated API documentation page with a graphical user interface;
@@ -50,22 +67,6 @@ To use all features in your browser by a dedicated API documentation page with a
 > These are the all endpoints that you can consume after adding your token in your header for each GET/POST/DELETE request.
 
 ![App Screenshot](app/assets/api-doc-2.png)
-
-## Kanban Board
-
-Kanban Board: [Link](https://github.com/yigitm/book-appointment/projects/2)
-
-![Kanban Board](https://user-images.githubusercontent.com/24368914/165861353-b4e45551-81f3-46a3-8abd-d7c3f86f23bd.png)
-
-## Live Demo
-
-React Frontend : [Live Demo Link](https://warm-smakager-3f854a.netlify.app/)
-
-Rails Backend : [Live Demo Link](https://afternoon-ravine-99760.herokuapp.com/api-docs/index.html)
-
-Rails Backend : [Repository Link](https://github.com/yigitm/book-appointment/dev)
-
-![React Frontend](app/assets/app.gif)
 
 ## Built With
 
