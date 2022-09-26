@@ -27,8 +27,7 @@ React Frontend : [Live Demo Link](https://warm-smakager-3f854a.netlify.app/)
 
 React Frontend : [Repository Link](https://github.com/yigitm/book-appointment-frontend)
 
-Rails Backend : [Live Demo Link](https://afternoon-ravine-99760.herokuapp.com/api-docs/index.html)
-
+Rails Backend : [Live Demo Link](https://dark-flower-106.fly.dev/api-docs/index.html)
 
 ![React Frontend](app/assets/app.gif)
 
